@@ -3,102 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EasyMail – Gmail Automation Redefined</title>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S4KR32P3E6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-S4KR32P3E6');
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EasyMail – Gmail Automation Redefined</title>
-  <meta name="description" content="EasyMail – Open-source Python module for effortless Gmail email sending. Perfect for developers and Python enthusiasts.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <title>EasyMail – Gmail Automation Perfected</title>
+  <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-S4KR32P3E6"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-S4KR32P3E6'); </script>
+  
+  <meta name="description" content="EasyMail – Open-source Python module for seamless Gmail email sending. Built for developers, by developers.">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Flowbite for UI components -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet">
+  <!-- AOS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- GSAP for advanced animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Hover.css for hover effects -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
+  <!-- Particles.js for background effects -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
+      font-family: 'Roboto', sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
       margin: 0;
       padding: 0;
       overflow-x: hidden;
+      position: relative;
     }
     h1, h2, h3 {
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
+      font-weight: 900;
     }
     section {
-      padding: 5rem 1rem;
+      padding: 6rem 1rem;
+      position: relative;
     }
     .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-out;
+      opacity: 1 !important; /* Override AOS hiding */
+      transform: none !important;
     }
     .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+      opacity: 1 !important;
+      transform: none !important;
     }
     .btn {
-      font-weight: 600;
-      border-radius: 0.5rem;
-      padding: 0.75rem 1.5rem;
+      font-weight: 700;
+      border-radius: 0.75rem;
+      padding: 1rem 2rem;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.75rem;
       transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
     .btn-primary {
-      background: #14b8a6;
+      background: #1a73e8;
       color: #fff;
+      box-shadow: 0 4px 14px rgba(26, 115, 232, 0.4);
     }
     .btn-primary:hover {
-      background: #0f766e;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(20, 184, 166, 0.4);
+      background: #1851b5;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(26, 115, 232, 0.6);
     }
     .btn-secondary {
       background: transparent;
-      color: #14b8a6;
-      border: 2px solid #14b8a6;
+      color: #1a73e8;
+      border: 2px solid #1a73e8;
     }
     .btn-secondary:hover {
-      background: #14b8a6;
+      background: #1a73e8;
       color: #fff;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(20, 184, 166, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(26, 115, 232, 0.4);
     }
     .card {
       background: #ffffff;
       border-radius: 1rem;
-      padding: 2rem;
-      transition: all 0.3s ease;
-      border: 1px solid #e2e8f0;
+      padding: 2.5rem;
+      transition: all 0.4s ease;
+      border: 1px solid #e5e7eb;
       width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 250px;
+      opacity: 1; /* Ensure cards are visible by default */
     }
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+    .card-icon {
+      font-size: 2.5rem;
+      color: #1a73e8;
+      margin-bottom: 1rem;
     }
     .terminal {
-      background: linear-gradient(145deg, #0f172a, #1e293b);
-      color: #14b8a6;
+      background: linear-gradient(145deg, #111827, #1f2937);
+      color: #34d399;
       border-radius: 1rem;
-      padding: 2.5rem;
+      padding: 3rem;
       font-family: 'JetBrains Mono', monospace;
-      min-height: 300px;
+      min-height: 350px;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-      border: 1px solid #334155;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+      border: 1px solid #374151;
       width: 100%;
       max-width: 100%;
     }
@@ -108,87 +129,162 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 2rem;
-      background: #1e293b;
+      height: 2.5rem;
+      background: #1f2937;
       border-radius: 1rem 1rem 0 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
     .terminal::after {
       content: '● ● ●';
       position: absolute;
-      top: 0.75rem;
-      left: 1rem;
-      color: #94a3b8;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
+      top: 0.9rem;
+      left: 1.5rem;
+      color: #9ca3af;
+      font-size: 0.9rem;
+      letter-spacing: 3px;
     }
     .cursor {
       display: inline-block;
-      width: 0.6rem;
-      height: 1rem;
-      background: #14b8a6;
+      width: 0.7rem;
+      height: 1.2rem;
+      background: #34d399;
       vertical-align: middle;
-      animation: blink 0.8s steps(1) infinite;
+      animation: blink 0.7s steps(1) infinite;
     }
     @keyframes blink {
       0%, 50% { opacity: 1; }
       51%, 100% { opacity: 0; }
     }
     .comment {
-      color: #94a3b8;
+      color: #9ca3af;
     }
     footer {
-      background: #1e293b;
-      color: #f8fafc;
-      padding: 3rem 1rem;
+      background: #1f2937;
+      color: #f9fafb;
+      padding: 4rem 1rem;
+      position: relative;
     }
     footer a {
-      color: #14b8a6;
+      color: #1a73e8;
       transition: color 0.3s;
     }
     footer a:hover {
-      color: #0f766e;
+      color: #1851b5;
     }
     .separator {
       height: 1px;
-      background: linear-gradient(to right, transparent, #e2e8f0, transparent);
-      margin: 3rem 0;
+      background: linear-gradient(to right, transparent, #d1d5db, transparent);
+      margin: 4rem 0;
     }
     .code-line {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      font-size: 0.85rem;
-      line-height: 1.4;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      overflow: hidden;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .glow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(26, 115, 232, 0.3) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 1rem;
+      justify-items: center;
+      align-items: stretch;
+      width: 100%;
+      max-width: 100%;
+    }
+    @media (max-width: 640px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      .card {
+        margin-bottom: 1rem;
+      }
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1025px) {
+      .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   </style>
 </head>
 <body class="scroll-smooth">
+  <!-- Navbar -->
+  <nav class="navbar fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-gray-900">EasyMail</div>
+      <div class="flex gap-6 items-center">
+        <a href="#home" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+        <a href="#features" class="text-gray-600 hover:text-gray-900 transition">Features</a>
+        <a href="#how-it-works" class="text-gray-600 hover:text-gray-900 transition">How It Works</a>
+        <a href="#community" class="text-gray-600 hover:text-gray-900 transition">Community</a>
+        <a href="https://github.com/goldstac/EasyMail" target="_blank" class="btn btn-primary hvr-grow">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-teal-50 to-cyan-100 text-center">
-    <div class="max-w-7xl mx-auto px-4">
-      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 fade-in">EasyMail – Gmail Automation Redefined</h1>
-      <p class="text-xl md:text-2xl text-gray-600 mb-8 fade-in">Open-source Python module for effortless Gmail email sending. Built for developers, by developers.</p>
-      <div class="flex justify-center gap-4 flex-wrap fade-in">
-        <a href="https://github.com/goldstac/EasyMail" target="_blank" class="btn btn-primary">
+  <section id="home" class="bg-gradient-to-br from-blue-50 to-indigo-100 text-center relative">
+    <div class="hero-bg">
+      <div id="particles-js"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6" data-aos="fade-up">EasyMail – Gmail Automation Perfected</h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">Open-source Python module for seamless Gmail email sending. Built for developers, by developers.</p>
+      <div class="flex justify-center gap-4 flex-wrap" data-aos="fade-up" data-aos-delay="200">
+        <a href="https://github.com/goldstac/EasyMail" target="_blank" class="btn btn-primary hvr-pulse">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 0C5.372 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.386-1.334-1.756-1.334-1.756-1.09-.744.082-.729.082-.729 1.205.085 1.838 1.238 1.838 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.774.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.932 0-1.31.467-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.47 11.47 0 013.003-.403c1.02.005 2.047.138 3.003.403 2.29-1.552 3.296-1.23 3.296-1.23.653 1.653.241 2.873.118 3.176.77.84 1.232 1.91 1.232 3.22 0 4.61-2.805 5.628-5.475 5.922.43.37.814 1.103.814 2.222 0 1.604-.015 2.898-.015 3.293 0 .32.216.694.825.576C20.565 21.795 24 17.297 24 12c0-6.627-5.373-12-12-12z"/>
           </svg>
           View on GitHub
         </a>
-        <a href="https://github.com/goldstac/EasyMail#readme" target="_blank" class="btn btn-secondary">Read Docs</a>
+        <a href="https://github.com/goldstac/EasyMail#readme" target="_blank" class="btn btn-secondary hvr-sweep-to-right">Read Docs</a>
       </div>
     </div>
   </section>
 
   <div class="separator"></div>
 
-  <!-- How It Works Section (Terminal with Commented Code) -->
-  <section class="bg-white">
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="bg-white relative">
     <div class="max-w-7xl mx-auto text-center">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-6 fade-in">How EasyMail Works</h2>
-      <p class="text-lg text-gray-600 mb-12 fade-in">Get started with Gmail email sending in just a few lines of code.</p>
-      <div class="terminal fade-in">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6" data-aos="fade-up">How EasyMail Works</h2>
+      <p class="text-lg text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Get started with Gmail email sending in just a few lines of code.</p>
+      <div class="terminal" data-aos="zoom-in">
         <span id="terminal-text"></span><span class="cursor"></span>
       </div>
     </div>
@@ -197,19 +293,22 @@
   <div class="separator"></div>
 
   <!-- Feature Highlights -->
-  <section class="bg-white">
+  <section id="features" class="bg-white">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 fade-in">Why Choose EasyMail?</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="card fade-in text-center">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12" data-aos="fade-up">Why Choose EasyMail?</h2>
+      <div class="features-grid">
+        <div class="card hvr-float" data-aos="fade-right">
+          <i class="fas fa-code card-icon"></i>
           <h3 class="text-xl font-bold mb-3">Open-Source</h3>
           <p class="text-gray-600">MIT-licensed, community-driven, and free to use.</p>
         </div>
-        <div class="card fade-in text-center">
+        <div class="card hvr-float" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-plug card-icon"></i>
           <h3 class="text-xl font-bold mb-3">Seamless Integration</h3>
           <p class="text-gray-600">Plug into any Python project with minimal setup.</p>
         </div>
-        <div class="card fade-in text-center">
+        <div class="card hvr-float" data-aos="fade-left" data-aos-delay="200">
+          <i class="fas fa-envelope card-icon"></i>
           <h3 class="text-xl font-bold mb-3">Reliable Delivery</h3>
           <p class="text-gray-600">Send emails with confidence using Gmail’s API.</p>
         </div>
@@ -220,37 +319,38 @@
   <div class="separator"></div>
 
   <!-- Contribution Section -->
-  <section class="text-center bg-white">
+  <section id="community" class="text-center bg-white">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-6 fade-in">Join Our Community</h2>
-      <p class="text-lg text-gray-600 mb-8 fade-in">Contribute to EasyMail, report issues, or fork the repo to make it your own.</p>
-      <a href="https://github.com/goldstac/EasyMail/fork" target="_blank" class="btn btn-primary fade-in">Fork on GitHub</a>
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6" data-aos="fade-up">Join Our Community</h2>
+      <p class="text-lg text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">Contribute to EasyMail, report issues, or fork the repo to make it your own.</p>
+      <a href="https://github.com/goldstac/EasyMail/fork" target="_blank" class="btn btn-primary hvr-bounce-in" data-aos="fade-up" data-aos-delay="200">Fork on GitHub</a>
     </div>
   </section>
 
   <div class="separator"></div>
 
   <!-- Call to Action -->
-  <section class="text-center bg-gradient-to-br from-teal-50 to-cyan-100">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-6 fade-in">Start Sending Emails Today</h2>
-      <p class="text-lg text-gray-600 mb-8 fade-in">Dive into EasyMail and simplify your Gmail email sending.</p>
-      <div class="flex justify-center gap-4 flex-wrap fade-in">
-        <a href="https://github.com/goldstac/EasyMail" target="_blank" class="btn btn-primary">
+  <section class="text-center bg-gradient-to-br from-blue-50 to-indigo-100 relative">
+    <div class="glow"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6" data-aos="fade-up">Start Sending Emails Today</h2>
+      <p class="text-lg text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">Dive into EasyMail and simplify your Gmail email sending.</p>
+      <div class="flex justify-center gap-4 flex-wrap" data-aos="fade-up" data-aos-delay="200">
+        <a href="https://github.com/goldstac/EasyMail" target="_blank" class="btn btn-primary hvr-pulse">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 0C5.372 0 0 5.373 0 12c0 5.302 3.438 9.8 8.205 11.387.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.386-1.334-1.756-1.334-1.756-1.09-.744.082-.729.082-.729 1.205.085 1.838 1.238 1.838 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.774.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.932 0-1.31.467-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.47 11.47 0 013.003-.403c1.02.005 2.047.138 3.003.403 2.29-1.552 3.296-1.23 3.296-1.23.653 1.653.241 2.873.118 3.176.77.84 1.232 1.91 1.232 3.22 0 4.61-2.805 5.628-5.475 5.922.43.37.814 1.103.814 2.222 0 1.604-.015 2.898-.015 3.293 0 .32.216.694.825.576C20.565 21.795 24 17.297 24 12c0-6.627-5.373-12-12-12z"/>
           </svg>
           Get Started
         </a>
-        <a href="https://github.com/goldstac/EasyMail#readme" target="_blank" class="btn btn-secondary">Read Documentation</a>
+        <a href="https://github.com/goldstac/EasyMail#readme" target="_blank" class="btn btn-secondary hvr-sweep-to-right">Read Documentation</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center">
+  <footer class="text-center relative">
     <div class="max-w-7xl mx-auto">
-      <div class="flex justify-center gap-6 flex-wrap fade-in">
+      <div class="flex justify-center gap-6 flex-wrap" data-aos="fade-up">
         <a href="https://github.com/goldstac/EasyMail#readme" target="_blank">Documentation</a>
         <a href="https://github.com/goldstac/EasyMail/fork" target="_blank">Fork</a>
         <a href="https://github.com/goldstac/EasyMail/issues" target="_blank">Issues</a>
@@ -260,31 +360,81 @@
           </svg>
         </a>
       </div>
-      <p class="mt-6 text-sm text-gray-400 fade-in">© 2025 EasyMail. MIT Licensed.</p>
+      <p class="mt-6 text-sm text-gray-400" data-aos="fade-up" data-aos-delay="100">© 2025 EasyMail. MIT Licensed.</p>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script>
-    // Scroll fade-in
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2, rootMargin: '0px 0px -50px 0px' };
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      });
-    }, appearOptions);
-    faders.forEach(fader => appearOnScroll.observe(fader));
+    // Debug card visibility
+    console.log('Checking card visibility...');
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.card');
+      if (cards.length === 0) {
+        console.error('No cards found in the features section!');
+      } else {
+        console.log(`Found ${cards.length} cards in the features section.`);
+        cards.forEach((card, index) => {
+          console.log(`Card ${index + 1}:`, card.innerHTML);
+        });
+      }
+      // Fallback to ensure card visibility
+      setTimeout(() => {
+        cards.forEach(card => {
+          card.style.opacity = '1';
+          card.style.transform = 'none';
+        });
+      }, 1000);
+    });
 
-    // Terminal typing animation with comments
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      disable: false
+    });
+
+    // GSAP Scroll Animations
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from('.navbar', {
+      y: -100,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out'
+    });
+
+    // Particles.js Configuration
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: '#1a73e8' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.5, random: true },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 150, color: '#1a73e8', opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out' }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
+        modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+      },
+      retina_detect: true
+    });
+
+    // Terminal typing animation
     const terminalLines = [
       { code: 'from easymail import easymail', comment: 'Import the EasyMail module' },
       { code: 'easymail.credentials("credentials.json")', comment: 'Authenticate with Gmail using your credentials file' },
       { code: 'easymail.sendmail.recipient("example@gmail.com")', comment: 'Set the email recipient' },
       { code: 'easymail.sendmail.subject("Hello World")', comment: 'Define the email subject' },
-      { code: 'easymail.sendmail("Hello World")', comment: 'Send the email with the specified message' }
+      { code: 'easymail.sendmail("Hello World")', comment: 'Send the email with the specified message' },
+      { code: 'easymail.sendmail.attach("file.pdf")', comment: 'Attach files effortlessly' },
+      { code: 'easymail.sendmail.html("<b>Bold Email!</b>")', comment: 'Support for HTML emails' },
+      { code: 'easymail.sendmail.cc("cc@example.com")', comment: 'Add CC recipients' },
+      { code: 'easymail.sendmail.bcc("bcc@example.com")', comment: 'Add BCC recipients' },
+      { code: 'easymail.sendmail.priority("high")', comment: 'Set email priority' }
     ];
     let lineIndex = 0;
     let charIndex = 0;
@@ -295,16 +445,67 @@
         if (charIndex < terminalLines[lineIndex].code.length) {
           terminal.innerHTML += terminalLines[lineIndex].code[charIndex];
           charIndex++;
-          setTimeout(typeLine, 60);
+          setTimeout(typeLine, 50);
         } else {
-          terminal.innerHTML += ' <span class="comment"># ' + terminalLines[lineIndex].comment + '</span><br>';
+          terminal.innerHTML += ` <span class="comment"># ${terminalLines[lineIndex].comment}</span><br>`;
           lineIndex++;
           charIndex = 0;
-          setTimeout(typeLine, 400);
+          setTimeout(typeLine, 300);
         }
       }
     }
     setTimeout(typeLine, 500);
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Parallax effect for hero section
+    gsap.to('.hero-bg', {
+      y: 100,
+      scrollTrigger: {
+        trigger: '.hero-bg',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+
+    // Button hover animations
+    gsap.utils.toArray('.btn').forEach(btn => {
+      btn.addEventListener('mouseenter', () => {
+        gsap.to(btn, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
+      });
+      btn.addEventListener('mouseleave', () => {
+        gsap.to(btn, { scale: 1, duration: 0.3, ease: 'power2.out' });
+      });
+    });
+
+    // Card hover animations
+    gsap.utils.toArray('.card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        gsap.to(card, {
+          scale: 1.03,
+          boxShadow: '0 16px 32px rgba(0, 0, 0, 0.25)',
+          duration: 0.4,
+          ease: 'power2.out'
+        });
+      });
+      card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+          scale: 1,
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+          duration: 0.4,
+          ease: 'power2.out'
+        });
+      });
+    });
   </script>
 </body>
 </html>
