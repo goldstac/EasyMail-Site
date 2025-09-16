@@ -425,17 +425,12 @@
 
     // Terminal typing animation
     const terminalLines = [
-      { code: 'from easymail import easymail', comment: 'Import the EasyMail module' },
-      { code: 'easymail.credentials("credentials.json")', comment: 'Authenticate with Gmail using your credentials file' },
-      { code: 'easymail.sendmail.recipient("example@gmail.com")', comment: 'Set the email recipient' },
-      { code: 'easymail.sendmail.subject("Hello World")', comment: 'Define the email subject' },
-      { code: 'easymail.sendmail("Hello World")', comment: 'Send the email with the specified message' },
-      { code: 'easymail.sendmail.attach("file.pdf")', comment: 'Attach files effortlessly' },
-      { code: 'easymail.sendmail.html("<b>Bold Email!</b>")', comment: 'Support for HTML emails' },
-      { code: 'easymail.sendmail.cc("cc@example.com")', comment: 'Add CC recipients' },
-      { code: 'easymail.sendmail.bcc("bcc@example.com")', comment: 'Add BCC recipients' },
-      { code: 'easymail.sendmail.priority("high")', comment: 'Set email priority' }
-    ];
+  { code: 'from easymail import easymail', comment: 'Import the EasyMail module' },
+  { code: 'easymail.credentials("credentials.json")', comment: 'Authenticate with Gmail using your credentials file' },
+  { code: 'easymail.sendmail.recipient("example@gmail.com")', comment: 'Set the email recipient' },
+  { code: 'easymail.sendmail.subject("Hello World")', comment: 'Define the email subject' },
+  { code: 'easymail.sendmail("Hello World")', comment: 'Send the email with the specified message' }
+];
     let lineIndex = 0;
     let charIndex = 0;
     const terminal = document.getElementById('terminal-text');
